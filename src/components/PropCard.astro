@@ -1,3 +1,26 @@
 ---
 
-<div class=""
+---
+const { title, imgSrc, ctaUrl } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="card">
+  <Image class="card-img" src={imgSrc} alt="" />
+  <div class="content-panel">
+    <h2>{title}</h2>
+    <slot />
+    <a href={ctaUrl} class="btn">Click Here</a>
+  </div>
+</div>
+
+<style>
+  .btn {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+  .card {
+    border: 1px solid var(--color-text);
+    padding: 1rem;
+  }
+</style>
