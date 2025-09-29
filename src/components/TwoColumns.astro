@@ -2,21 +2,28 @@
 
 ----
 
+
 <div class="container">
-    <div class="col">
-        <slot name="center"
-    </div>
-    <div class="col">
-        <slot name="right"/>
-    </div>
+  <div class="col">
+    <slot name="left" />
+  </div>
+  <div class="col">
+    <slot name="center" />
+  </div>
+  <div class="col">
+    <slot name="right" />
+  </div>
 </div>
 
 <style>
-.container{ 
+  .container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-}
+  }
 
-
+  .col {
+    border: 1px solid var(--color-text);
+    padding: 1rem;
+  }
 </style>
