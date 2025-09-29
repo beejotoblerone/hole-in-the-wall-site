@@ -1,0 +1,22 @@
+----
+
+----
+
+<div class="container">
+    <div class="col">
+        <slot name="center"
+    </div>
+    <div class="col">
+        <slot name="right"/>
+    </div>
+</div>
+
+<style>
+.container{ 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+
+</style>

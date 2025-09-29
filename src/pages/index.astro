@@ -5,12 +5,19 @@ import Container from "@components/Container.astro";
 import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
+import TwoColumns from "@components/TwoColumns.astro";
 ---
 
 <Layout title="Astro Starter">
   <Container>
     <Image src={AstroLogo} alt="" />
     <h1>a simple Astro Starter Kit</h1>
+    <TwoColumns>
+      <h2 slot="left">This is the left column</h2>
+      <p slot="right">
+        This is the right column. You can put anything you want in either column.
+      </p>
+    </TwoColumns>
     <SampleComponent text="This is a sample component!" />
     <SampleMarkdown />
   </Container>
