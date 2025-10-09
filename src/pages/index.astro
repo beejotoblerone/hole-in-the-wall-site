@@ -1,12 +1,13 @@
 ---
 
 import Layout from "@layouts/Layout.astro";
-import SampleComponent from "@components/flatbreadsection.astro";
+import Flatbreadsection from "@components/Flatbreadsection.astro";
 import Container from "@components/Container.astro";
 import TwoColumns from "@components/TwoColumns.astro";
 import AstroLogo from "@assets/images/logo2.png";
 import { Image } from "astro:assets";
 import PropCard from "@components/PropCard.astro";
+import Flatbreadsection from "@components/Flatbreadsection.astro";
 
 
 ---
@@ -21,7 +22,7 @@ import PropCard from "@components/PropCard.astro";
         This is the right column. You can put anything you want in either column.
       </p>
     </TwoColumns>
-    <SampleComponent text="This is a sample component!" />
+    <Flatbreadsection/>
 
   </Container>
 </Layout>
