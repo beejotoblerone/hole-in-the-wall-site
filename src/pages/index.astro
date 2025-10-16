@@ -3,12 +3,12 @@
 import Layout from "@layouts/Layout.astro";
 import Flatbreadsection from "@components/Flatbreadsection.astro";
 import Container from "@components/Container.astro";
-import TwoColumns from "@components/TwoColumns.astro";
 import Holeinthewall from "@assets/images/logo2.png";
 import TopNav from "@components/TopNav.astro";
 import Hole from "@components/Hole.astro";
 import About from "@components/About.astro";
 import Contact from "@components/Contact.astro";
+import Menu from "@components/Menu.astro";
 import PropCard from "@components/PropCard.astro";
 
 
@@ -20,13 +20,8 @@ import PropCard from "@components/PropCard.astro";
   <Hole/>
   <Container>
     
-    <h1>a simple Astro Starter Kit</h1>
-    <TwoColumns>
-      <h2 slot="left">This is the left column</h2>
-      <p slot="right">
-        This is the right column. You can put anything you want in either column.
-      </p>
-    </TwoColumns>
+  
+    <Menu/>
     <Flatbreadsection/>
     <About/>
     <Contact
