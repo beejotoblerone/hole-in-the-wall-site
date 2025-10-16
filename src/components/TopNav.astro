@@ -1,19 +1,22 @@
 
-<nav class="topnav" aria-label="Main navigation">
-	<div class="topnav-container">
-		<a href="/" class="topnav-logo">SiteName</a>
-		<ul class="topnav-links">
-			<li><a href="/">Home</a></li>
-			<li><a href="#About">About</a></li>
-			<li><a href="#Contact">Contact</a></li>
-		</ul>
-	</div>
-</nav>
+
 
 <style>
+.nav-logo-img {
+	max-height: 10.5rem; /* 3x bigger than 3.5rem */
+	width: auto;
+	vertical-align: middle;
+	height: 12vw;
+}
+@media (max-width: 600px) {
+	.nav-logo-img {
+		max-height: 4rem;
+		height: 16vw;
+	}
+}
 .topnav {
 	width: 100%;
-	background: var(--color-bg-secondary, #6d9550);
+	background: var(--color-bg-secondary, #dbba49);
 	padding: 0.5rem 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
@@ -24,12 +27,23 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1rem;
+	flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+	.topnav-container {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.5rem;
+		padding: 0 0.5rem;
+	}
 }
 .topnav-logo {
 	font-weight: bold;
 	font-size: 1.2rem;
 	text-decoration: none;
 	color: var(--color-text, #222);
+	display: flex;
+	align-items: center;
 }
 .topnav-links {
 	list-style: none;
@@ -38,6 +52,14 @@
 	margin: 0;
 	padding: 0;
 	align-items: center;
+}
+@media (max-width: 600px) {
+	.topnav-links {
+		flex-direction: column;
+		gap: 0.75rem;
+		align-items: flex-start;
+		padding-bottom: 0.5rem;
+	}
 }
 .topnav-links a {
 	text-decoration: none;
@@ -49,7 +71,17 @@
 }
 </style>
 
----
 
----
+<nav class="topnav" aria-label="Main navigation">
+  <div class="topnav-container">
+	<a href="/" class="topnav-logo">
+	  <img src="/src/assets/images/logo.png" alt="Logo" class="nav-logo-img" />
+	</a>
+	<ul class="topnav-links">
+	  <li><a href="/">Home</a></li>
+	  <li><a href="#About">About</a></li>
+	  <li><a href="#Contact">Contact</a></li>
+	</ul>
+  </div>
+</nav>
 

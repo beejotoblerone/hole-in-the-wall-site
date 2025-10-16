@@ -6,16 +6,18 @@ import Container from "@components/Container.astro";
 import TwoColumns from "@components/TwoColumns.astro";
 import Holeinthewall from "@assets/images/logo2.png";
 import TopNav from "@components/TopNav.astro";
-import { Image } from "astro:assets";
+import Hole from "@components/Hole.astro";
 import About from "@components/About.astro";
+import Contact from "@components/Contact.astro";
 import PropCard from "@components/PropCard.astro";
 
 
 ---
 
 <Layout title="Astro Starter">
-  <Image src={Holeinthewall} alt="" class="upper nav logo"/>
+  
   <TopNav/>
+  <Hole/>
   <Container>
     
     <h1>a simple Astro Starter Kit</h1>
@@ -27,6 +29,7 @@ import PropCard from "@components/PropCard.astro";
     </TwoColumns>
     <Flatbreadsection/>
     <About/>
+    <Contact
 
   </Container>
 </Layout>
