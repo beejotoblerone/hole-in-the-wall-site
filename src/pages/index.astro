@@ -4,17 +4,17 @@ import Layout from "@layouts/Layout.astro";
 import Flatbreadsection from "@components/Flatbreadsection.astro";
 import Container from "@components/Container.astro";
 import TwoColumns from "@components/TwoColumns.astro";
-import AstroLogo from "@assets/images/logo2.png";
+import Holeinthewall from "@assets/images/logo2.png";
 import { Image } from "astro:assets";
 import PropCard from "@components/PropCard.astro";
-import Flatbreadsection from "@components/Flatbreadsection.astro";
 
 
 ---
 
 <Layout title="Astro Starter">
+  <Image src={Holeinthewall} alt="" class="upper nav logo"/>
   <Container>
-    <Image src={AstroLogo} alt="" />
+    
     <h1>a simple Astro Starter Kit</h1>
     <TwoColumns>
       <h2 slot="left">This is the left column</h2>
