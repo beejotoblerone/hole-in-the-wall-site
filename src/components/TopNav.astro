@@ -1,3 +1,54 @@
+
+<nav class="topnav" aria-label="Main navigation">
+	<div class="topnav-container">
+		<a href="/" class="topnav-logo">SiteName</a>
+		<ul class="topnav-links">
+			<li><a href="/">Home</a></li>
+			<li><a href="/">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+
+<style>
+.topnav {
+	width: 100%;
+	background: var(--color-bg-secondary, #6d9550);
+	padding: 0.5rem 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+.topnav-container {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+.topnav-logo {
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: var(--color-text, #222);
+}
+.topnav-links {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+.topnav-links a {
+	text-decoration: none;
+	color: var(--color-text, #222);
+	transition: color 0.15s;
+}
+.topnav-links a:hover {
+	color: var(--color-accent, #0077cc);
+}
+</style>
+
 ---
 
 ---
