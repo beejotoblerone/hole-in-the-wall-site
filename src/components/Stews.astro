@@ -2,17 +2,28 @@
 const { text } = Astro.props;
 ---
 
-<div class="flatbreadsection">
-  <h2>Flatbreads </h2>
-  <p> 
-The Heart Cup- classic beef stew
+<div class="stewsection">
+  <h2>Stews </h2>
 
-The Harvest Cup- minestrone(v)
+  <div class="menu-row">
+    <span class="menuitem">The Heart Cup</span>
+    <span class="menu-desc">classic beef stew</span>
+  </div>
 
-The Forest Cup- mushroom barley/rosemary
+  <div class="menu-row">
+    <span class="menuitem">The Harvest Cup</span>
+    <span class="menu-desc">minestrone (v)</span>
+  </div>
 
-The Drunken Cup- loaded beer cheese potato soup
-  </p>
+  <div class="menu-row">
+    <span class="menuitem">The Forest Cup</span>
+    <span class="menu-desc">mushroom barley / rosemary</span>
+  </div>
+
+  <div class="menu-row">
+    <span class="menuitem">The Drunken Cup</span>
+    <span class="menu-desc">loaded beer cheese potato soup</span>
+  </div>
 
 </div>
 
@@ -24,4 +35,10 @@ The Drunken Cup- loaded beer cheese potato soup
     margin-top: 1rem;
     max-width: 400px;
   }
+  .menuitem {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .menu-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem; }
+  .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
 </style>

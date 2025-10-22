@@ -1,11 +1,44 @@
-Paninis/Sandwiches
+---
+const { text } = Astro.props;
+---
 
-The Nomad Panini- Artisanal Ciabatta, prosciutto, gruyere, honeycrisp apple,blackberry balsamic
+<div class="sandwich-section">
+  <h2>Sandwiches & Paninis</h2>
+</p>
+  <div >
+    <span class="menuitem">The Nomad Panini-</span>
+    <span class="menu-desc">- Artisanal Ciabatta, prosciutto, gruyere, honeycrisp apple, blackberry balsamic</span>
+  </div>
 
-The Second Breakfast Panini- Artisanal ciabatta, garlic rosemary butter hashbrowns, egg omelette, marinated tomato, maple bacon, goat cheese
+  <div >
+    <span class="menuitem">The Second Breakfast Panini</span>
+    <span class="menu-desc">- Artisanal ciabatta, garlic rosemary butter hashbrowns, egg omelette, marinated tomato, maple bacon, goat cheese</span>
+  </div>
 
-The Festive Sandwich- Shallow fried potato bread sandwich with curried pea and potato filling, mago chutney, cilantro sauce
+  <div >
+    <span class="menuitem">The Festive Sandwich</span>
+    <span class="menu-desc">- Shallow fried potato bread sandwich with curried pea and potato filling, mango chutney, cilantro sauce</span>
+  </div>
 
-The Harvest Moon Sandwich- Artisanal ciabatta, garlic rosemary butter sweet potato fries, mixed greens, cranberry jam, apple salsa with melted muenster cheese
+  <div >
+    <span class="menuitem">The Harvest Moon Sandwich</span>
+    <span class="menu-desc">- Artisanal ciabatta, garlic rosemary butter sweet potato fries, mixed greens, cranberry jam, apple salsa with melted muenster cheese</span>
+  </div>
 
-The Barter Panini- Artisanal ciabatta, roast beef, pastrami, white cheddar, pickled sweet peppers, onion rings, dill aioli
+  <div >
+    <span class="menuitem">The Barter Panini</span>
+    <span class="menu-desc">- Artisanal ciabatta, roast beef, pastrami, white cheddar, pickled sweet peppers, onion rings, dill aioli</span>
+  </div>
+</div>
+
+<style>
+  .menuitem {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
+
+  
+</style>
+
+

@@ -3,34 +3,39 @@ const { text } = Astro.props;
 ---
 
 <div class="flatbreadsection">
-  <h2>Flatbreads </h2>
-  <p> 
-The Forager- brick oven flatbread with gruyere, mozz, caramelized onions, mushrooms, candied walnuts topped with truffle parm and blackberry balsamic (veg)
-  </p>
+  <h2>Flatbreads</h2>
 
-  <p>
-    The Farmer- brick oven flatbread, romano cheese, charred carrot and zucchini ribbons, hot honey butter drizzle, arugula and lemon zest (veg)
-  </p>
+  <div class="menu-row">
+    <span class="menuitem">The Forager</span>
+    <span class="menu-desc">brick oven flatbread with gruyere, mozz, caramelized onions, mushrooms, candied walnuts topped with truffle parm and blackberry balsamic (veg)</span>
+  </div>
 
-  <p>
-    The Artisan- brick oven flatbread, goat cheese, prosciutto, peaches, fig jam, wildflower honey, wine crusted toscano shavings, cracked black pepper
-  </p>
+  <div class="menu-row">
+    <span class="menuitem">The Farmer</span>
+    <span class="menu-desc">brick oven flatbread, romano cheese, charred carrot and zucchini ribbons, hot honey butter drizzle, arugula and lemon zest (veg)</span>
+  </div>
 
-  <p>
-  The Adventurer- brick oven flatbread, calabrian chili red sauce, smoked mozzarella, prosciutto, italian sausage crumble, pepperoni, olive tapenade (lemon zest)
+  <div class="menu-row">
+    <span class="menuitem">The Artisan</span>
+    <span class="menu-desc">brick oven flatbread, goat cheese, prosciutto, peaches, fig jam, wildflower honey, wine crusted toscano shavings, cracked black pepper</span>
+  </div>
 
-  </p>
-  <p>
-  The Herbalist- brick oven flatbread, vegan rosemary crema, charred pear slices, basil, crispy chickpea topping(v)
-  </p>
+  <div class="menu-row">
+    <span class="menuitem">The Adventurer</span>
+    <span class="menu-desc">brick oven flatbread, calabrian chili red sauce, smoked mozzarella, prosciutto, italian sausage crumble, pepperoni, olive tapenade (lemon zest)</span>
+  </div>
+
+  <div class="menu-row">
+    <span class="menuitem">The Herbalist</span>
+    <span class="menu-desc">brick oven flatbread, vegan rosemary crema, charred pear slices, basil, crispy chickpea topping (v)</span>
+  </div>
+
 </div>
 
 <style>
-  .sample-component {
-    border: 2px solid var(--color-accent);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    max-width: 400px;
+  .menuitem {
+    margin-bottom: 1rem;
+    font-weight: bold;
   }
+  .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
 </style>
