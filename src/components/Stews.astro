@@ -1,44 +1,58 @@
 ---
-const { text } = Astro.props;
+import StewImg from '@assets/images/stew.png';
+
 ---
 
-<div class="stewsection">
-  <h2>Stews </h2>
+<section class="stewsection" aria-labelledby="stews-heading">
+  <h2 id="stews-heading">Stews</h2>
 
-  <div class="menu-row">
-    <span class="menuitem">The Heart Cup</span>
-    <span class="menu-desc">classic beef stew</span>
+  <div class="stew-grid">
+    <div class="stew-list">
+      <div class="menu-row">
+        <span class="menuitem">The Heart Cup</span>
+        <span class="menu-desc">classic beef stew</span>
+      </div>
+
+      <div class="menu-row">
+        <span class="menuitem">The Harvest Cup</span>
+        <span class="menu-desc">minestrone (v)</span>
+      </div>
+
+      <div class="menu-row">
+        <span class="menuitem">The Forest Cup</span>
+        <span class="menu-desc">mushroom barley / rosemary</span>
+      </div>
+
+      <div class="menu-row">
+        <span class="menuitem">The Drunken Cup</span>
+        <span class="menu-desc">loaded beer cheese potato soup</span>
+      </div>
+    </div>
+
+    <div class="stew-img-container" aria-hidden="true">
+      <img src={StewImg.src} alt="Bowl of stew" class="stew-image" />
+    </div>
   </div>
 
-  <div class="menu-row">
-    <span class="menuitem">The Harvest Cup</span>
-    <span class="menu-desc">minestrone (v)</span>
-  </div>
-
-  <div class="menu-row">
-    <span class="menuitem">The Forest Cup</span>
-    <span class="menu-desc">mushroom barley / rosemary</span>
-  </div>
-
-  <div class="menu-row">
-    <span class="menuitem">The Drunken Cup</span>
-    <span class="menu-desc">loaded beer cheese potato soup</span>
-  </div>
-
-</div>
+</section>
 
 <style>
-  .sample-component {
-    border: 2px solid var(--color-accent);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    max-width: 400px;
-  }
   .menuitem {
-    margin-bottom: 1rem;
-    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    display:block;
   }
   .menu-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem; }
   .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
+  .stewsection { margin-bottom: 1.5rem; }
+
+  .stew-grid { display: grid; grid-template-columns: 1fr 220px; gap: 1rem; align-items: start; }
+  .stew-img-container { display:flex; align-items:center; justify-content:center; }
+  .stew-image { width:100%; max-width:220px; height:auto; border-radius:8px; object-fit:cover;  }
+
+  @media (max-width: 700px) {
+    .stew-grid { grid-template-columns: 1fr; }
+    .stew-image { max-width: 320px; }
+    .stew-texts { text-align:left; }
+  }
 </style>

@@ -14,6 +14,9 @@ import Sandwiches from "@components/Sandwiches.astro";
 import PropCard from "@components/PropCard.astro";
 import Bowls from "@components/Bowls.astro";
 import Baked from "@components/Baked.astro";
+import WhiteHole from "@assets/images/whitehole.png";
+import Sides from "@components/Sides.astro";
+import Drinks from "@components/Drinks.astro";
 
 
 ---
@@ -31,8 +34,35 @@ import Baked from "@components/Baked.astro";
     <Sandwiches/>
     <Bowls/>
     <Baked/>
+    <Sides/>
+    <Drinks
     <About/>
     <Contact/>
 
   </Container>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <img src={WhiteHole.src} alt="Hole in the Wall logo" class="footer-logo" />
+      <div class="footer-texts">
+        <p class="footer-text">Hole in the Wall —  &nbsp;Open daily 11am–9pm.</p>
+        <p class="footer-note">Follow us on socials for updates and specials.</p>
+      </div>
+    </div>
+  </footer>
 </Layout>
+
+<style>
+.site-footer {
+  background: var(--color-bg-secondary, #2e5c33);
+  color: var(--color-text-on-dark, #fff);
+  padding: 1.25rem 0;
+  margin-top: 2rem;
+}
+.footer-inner { max-width: 900px; margin: 0 auto; padding: 0 1rem; display:flex;flex-direction:column;gap:0.25rem;align-items:center; }
+.footer-text { margin:0; font-weight:600; }
+.footer-note { margin:0; font-size:0.9rem; opacity:0.9; }
+.footer-logo { max-height:48px; width:auto; display:block; }
+.footer-texts { display:flex;flex-direction:column;gap:0.25rem;align-items:center;text-align:center; }
+@media (min-width:700px) { .footer-texts { align-items:flex-start; text-align:left; } }
+@media (min-width:700px) { .footer-inner { flex-direction:row; justify-content:space-between; } }
+</style>

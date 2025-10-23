@@ -7,14 +7,14 @@
 </section>
 
 <div class="abstract-menu">
-	<button class="circle-btn">Flatbreads</button>
-	<button class="circle-btn">Stews</button>
-	<button class="circle-btn">Sandwiches</button>
-	<button class="circle-btn">Bowls</button>
-	<button class="circle-btn">Baked Potatoes</button>
-	<button class="circle-btn">Sides</button>
-	<button class="circle-btn">Drinks</button>
-	<button class="circle-btn">Desserts</button>
+	<a class="circle-btn" href="#flatbreads" role="button">Flatbreads</a>
+	<a class="circle-btn" href="#stews-heading" role="button">Stews</a>
+	<a class="circle-btn" href="#sandwiches" role="button">Sandwiches</a>
+	<a class="circle-btn" href="#bowls" role="button">Bowls</a>
+	<a class="circle-btn" href="#baked" role="button">Baked Potatoes</a>
+	<a class="circle-btn" href="#sides" role="button">Sides</a>
+	<a class="circle-btn" href="#drinks" role="button">Drinks</a>
+	<a class="circle-btn" href="#desserts" role="button">Desserts</a>
 </div>
 
 <style>
@@ -40,12 +40,18 @@
 	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 	cursor: pointer;
 	transition: background 0.2s, transform 0.12s;
+	text-decoration: none;
 }
 .circle-btn:hover {
 	background: #ca6d3a;
 	transform: translateY(-4px);
 	color: #fff;
 }
+.circle-btn:focus {
+  outline: 3px solid rgba(250,200,100,0.9);
+  outline-offset: 4px;
+}
+.circle-btn:visited, .circle-btn:link { text-decoration: none; }
 @media (max-width: 700px) {
 	.abstract-menu {
 		grid-template-columns: repeat(2, 1fr);

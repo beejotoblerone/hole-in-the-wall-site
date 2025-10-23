@@ -2,8 +2,9 @@
 const { text } = Astro.props;
 ---
 
-<div class="sandwich-section">
-  <h2>Sandwiches & Paninis</h2>
+</section>
+<section id="sandwiches" class="sandwich-section" aria-labelledby="sandwiches-heading">
+  <h2 id="sandwiches-heading">Sandwiches & Paninis</h2>
 </p>
   <div >
     <span class="menuitem">The Nomad Panini-</span>
@@ -29,14 +30,15 @@ const { text } = Astro.props;
     <span class="menuitem">The Barter Panini</span>
     <span class="menu-desc">- Artisanal ciabatta, roast beef, pastrami, white cheddar, pickled sweet peppers, onion rings, dill aioli</span>
   </div>
-</div>
+  </div>
 
-<style>
+  <style>
   .menuitem {
     margin-bottom: 1rem;
     font-weight: bold;
   }
   .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
+  .sandwich-section { margin-bottom: 1.5rem; }
 
   
 </style>

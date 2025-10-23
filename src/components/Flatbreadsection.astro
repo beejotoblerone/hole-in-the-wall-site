@@ -2,8 +2,8 @@
 const { text } = Astro.props;
 ---
 
-<div class="flatbreadsection">
-  <h2>Flatbreads</h2>
+<section id="flatbreads" class="flatbreadsection" aria-labelledby="flatbreads-heading">
+  <h2 id="flatbreads-heading">Flatbreads</h2>
 
   <div class="menu-row">
     <span class="menuitem">The Forager</span>
@@ -30,7 +30,7 @@ const { text } = Astro.props;
     <span class="menu-desc">brick oven flatbread, vegan rosemary crema, charred pear slices, basil, crispy chickpea topping (v)</span>
   </div>
 
-</div>
+</section>
 
 <style>
   .menuitem {
@@ -38,4 +38,6 @@ const { text } = Astro.props;
     font-weight: bold;
   }
   .menu-desc { color: var(--color-text-muted, #666); font-weight: 400; }
+  /* spacing between sections when rendered on a page */
+  .flatbreadsection { margin-bottom: 1.5rem; }
 </style>

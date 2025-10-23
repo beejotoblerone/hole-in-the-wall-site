@@ -1,0 +1,80 @@
+
+
+<section id="drinks" class="drinks-section" aria-labelledby="drinks-heading">
+	<h2 id="drinks-heading">Drinks</h2>
+
+	<div class="drinks-grid">
+		<div class="drinks-col">
+			<h3 class="drinks-title">Wine</h3>
+			<ul>
+				<li>Pinot Grigio</li>
+				<li>Cabernet Sauvignon</li>
+				<li>Pinot Noir</li>
+				<li>Port</li>
+				<li>White Zinfandel</li>
+				<li>Sangria</li>
+			</ul>
+		</div>
+
+		<div class="drinks-col">
+			<h3 class="drinks-title">Beer</h3>
+			<ul>
+				<li>Modelo</li>
+				<li>Boston Lager</li>
+				<li>Guinness</li>
+			</ul>
+		</div>
+
+		<div class="drinks-col">
+			<h3 class="drinks-title">Coffee</h3>
+			<ul>
+				<li>Americano</li>
+				<li>Latte</li>
+				<li>Black</li>
+				<li>One Shot</li>
+			</ul>
+		</div>
+
+		<div class="drinks-col">
+			<h3 class="drinks-title">Non‑Alcoholic</h3>
+			<ul>
+				<li>Apple cider</li>
+				<li>Hard apple cider</li>
+				<li>Lemonade</li>
+				<li>Chaider</li>
+				<li>Lavender lemonade</li>
+				<li>Hibiscus lemonade</li>
+				<li>Hot Chocolate</li>
+			</ul>
+		</div>
+
+		<div class="drinks-col">
+			<h3 class="drinks-title">Tea</h3>
+			<ul>
+				<li>Iced Black</li>
+				<li>Iced Green</li>
+				<li>Chai</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<style>
+	.drinks-section { margin-bottom: 1.5rem; }
+	.drinks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; align-items: start; }
+
+	/* Force exactly 5 columns on wide viewports */
+	@media (min-width: 900px) {
+		.drinks-grid { grid-template-columns: repeat(5, 1fr); }
+	}
+	.drinks-col { background: transparent; padding: 0.25rem 0.5rem; }
+	.drinks-title { font-weight: 700; margin: 0 0 0.5rem 0; font-size: 1.05rem; }
+	.drinks-col ul { list-style: none; margin: 0; padding: 0; }
+	.drinks-col li { margin-bottom: 0.35rem; color: var(--color-text-muted, #555); }
+	@media (max-width: 600px) {
+		.drinks-title { font-size: 1rem; }
+		.drinks-grid { gap: 0.75rem; }
+	}
+</style>
+
