@@ -37,30 +37,31 @@
         color: var(--color-darkgreen, darkgreen);
     }
 
-        .potato-layout {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 1rem;
-            align-items: center;
-            width: min(1000px, 95vw);
-            margin: 1rem auto;
-        }
-        .potato-image img { max-width: 280px; width: 100%; height: auto; display:block; margin:0 auto; }
-        .potato-col { display: flex; flex-direction: column; gap: 0.5rem; }
-    .menu-row { display:flex; flex-direction: column; gap:0.25rem; align-items:flex-start; max-width: 320px; }
+    /* center the whole section */
+    .potato-section { display:flex; flex-direction:column; align-items:center; }
+    .potato-section h2 { text-align:center; }
+
+    .potato-layout {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1rem;
+        align-items: center;
+        width: min(1000px, 95vw);
+        margin: 1rem auto;
+        justify-items: center;
+    }
+
+    .potato-image img { max-width: 280px; width: 100%; height: auto; display:block; margin:0 auto; }
+    /* center the content inside each column */
+    .potato-col { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+    .menu-row { display:flex; flex-direction: column; gap:0.25rem; align-items:center; max-width: 320px; text-align:center; }
     .menuitem { font-weight: 700; display: block; }
     .menu-desc { color: var(--color-text-muted, #666); }
 
-    /* Left column options align toward the image (right); right column align toward image (left) */
-    .potato-layout .potato-col:first-child { align-items: flex-end; }
-    .potato-layout .potato-col:last-child { align-items: flex-start; }
-    .potato-layout .potato-col:first-child .menu-row { align-items: flex-end; text-align: right; }
-    .potato-layout .potato-col:last-child .menu-row { align-items: flex-start; text-align: left; }
-
-        @media (max-width: 800px) {
-            .potato-layout { grid-template-columns: 1fr; }
-            .potato-image { order: 1; }
-            .potato-col { order: 2; }
-        }
-        .potato-layout { margin-bottom: 1.5rem; }
+    @media (max-width: 800px) {
+        .potato-layout { grid-template-columns: 1fr; }
+        .potato-image { order: 1; }
+        .potato-col { order: 2; }
+    }
+    .potato-layout { margin-bottom: 1.5rem; }
 </style>
